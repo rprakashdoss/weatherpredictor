@@ -14,8 +14,6 @@ object WeatherPredictor {
 
     val numOfLocations = config.numOfLocations
 
-    System.setProperty("hadoop.home.dir", "C:\\hadoop-common-2.2.0-bin-master")
-
     val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")
     val startDate = LocalDateTime.now()
 
