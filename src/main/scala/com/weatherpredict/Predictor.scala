@@ -39,7 +39,7 @@ object Model {
       val numTrees = 32
       val featureSubsetStrategy = "auto"
       val impurity = "gini"
-      val maxDepth = 64
+      val maxDepth = 10
       val maxBins = 100
       val model = RandomForest.trainClassifier(training, numClasses, categoricalFeaturesInfo,
         numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins)
@@ -56,7 +56,7 @@ object Model {
       val numTrees = 32
       val featureSubsetStrategy = "auto"
       val impurity = "variance"
-      val maxDepth = 64
+      val maxDepth = 10
       val maxBins = 100
       val model = RandomForest.trainRegressor(training, categoricalFeaturesInfo,
         numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins)
