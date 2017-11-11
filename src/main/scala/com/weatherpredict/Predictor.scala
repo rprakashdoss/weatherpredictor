@@ -36,10 +36,10 @@ object Model {
 
       val numClasses = Condition.maxId
       val categoricalFeaturesInfo = Map[Int, Int]()
-      val numTrees = 5
+      val numTrees = 32
       val featureSubsetStrategy = "auto"
       val impurity = "gini"
-      val maxDepth = 4
+      val maxDepth = 64
       val maxBins = 100
       val model = RandomForest.trainClassifier(training, numClasses, categoricalFeaturesInfo,
         numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins)
@@ -53,10 +53,10 @@ object Model {
     override def build(training: RDD[LabeledPoint]): RandomForestModel = {
 
       val categoricalFeaturesInfo = Map[Int, Int]()
-      val numTrees = 5
+      val numTrees = 32
       val featureSubsetStrategy = "auto"
       val impurity = "variance"
-      val maxDepth = 4
+      val maxDepth = 64
       val maxBins = 100
       val model = RandomForest.trainRegressor(training, categoricalFeaturesInfo,
         numTrees, featureSubsetStrategy, impurity, maxDepth, maxBins)
